@@ -4,7 +4,14 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
   def change
     create_table :users do |t|
       ## Database authenticatable
+      t.integer :postal_code, null: false
+      t.string :prefecture_code, null: false
+      t.string :city, null: false
+      t.string :street, null: false
+      t.string :other_address # 番地以降の住所がない場合もあるため、null: falseはつけない
+      t.string :name,              null: false, default: ""
       t.string :email,              null: false, default: ""
+      t.string :introduction,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
 
       ## Recoverable

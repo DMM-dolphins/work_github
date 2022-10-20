@@ -13,7 +13,14 @@
 ActiveRecord::Schema.define(version: 2022_09_14_062737) do
 
   create_table "users", force: :cascade do |t|
+    t.integer "postal_code", null: false
+    t.string "prefecture_code", null: false
+    t.string "city", null: false
+    t.string "street", null: false
+    t.string "other_address"
+    t.string "name", default: "", null: false
     t.string "email", default: "", null: false
+    t.string "introduction", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"

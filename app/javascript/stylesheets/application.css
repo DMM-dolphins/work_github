@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+@import "skippr"; 
+
+#container{
+  height: 500px;
+}
+
+.image1 {
+  background-image: url('../images/test1.jpg');
+}
+.image2 {
+  background-image: url('../images/test2.jpg');
+}
+.image3 {
+  background-image: url('../images/test3.jpg');
+}
+.image4 {
+  background-image: url('../images/test4.jpg');
+}
+.image5 {
+  background-image: url('../images/test5.jpg');
+}
